@@ -3,12 +3,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        boolean keepRunning = true;
 
-        while (keepRunning) {
+        while (true){
             try {
                 System.out.println("==================================");
-                System.out.println("======== LEDGER ACCOUNT ==========");
+                System.out.println("============ ACCOUNT =============");
                 System.out.println("==================================");
                 System.out.println("D) Add Deposit");
                 System.out.println("P) Make Payment (Debit)");
@@ -32,7 +31,22 @@ public class Main {
 
                 } else if (choice.equalsIgnoreCase("X")) {
                     System.out.println("Thank you for using the Ledger App. Goodbye!");
-                    keepRunning = false;
+                            System.out.println("░░░░░░▄▄▄░░▄██▄░░░\n" +
+                "░░░░░▐▀█▀▌░░░░▀█▄░░░\n" +
+                "░░░░░▐█▄█▌░░░░░░▀█▄░░\n" +
+                "░░░░░░▀▄▀░░░▄▄▄▄▄▀▀░░\n" +
+                "░░░░▄▄▄██▀▀▀▀░░░░░░░\n" +
+                "░░░█▀▄▄▄█░▀▀░░\n" +
+                "░░░▌░▄▄▄▐▌▀▀▀░░\n" +
+                "▄░▐░░░▄▄░█░▀▀ ░░ \n" +
+                "▀█▌░░░▄░▀█▀░▀ ░░\n" +
+                "░░░░░░░▄▄▐▌▄▄░░░\n" +
+                "░░░░░░░▀███▀█░▄░░\n" +
+                "░░░░░░▐▌▀▄▀▄▀▐▄░░\n" +
+                "░░░░░░▐▀░░░░░░▐▌░░\n" +
+                "░░░░░░█░░░░░░░░█░░░\n" +
+                "░░░░░▐▌░░░░░░░░░█░░");
+                    break;
 
                 } else {
                     System.out.println("Invalid input. Please try again.");
@@ -42,6 +56,5 @@ public class Main {
                 System.out.println("Something went wrong. Please try again.");
             }
         }
-        scan.close();
     }
 }
