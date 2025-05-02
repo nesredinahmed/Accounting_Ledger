@@ -84,32 +84,100 @@ public class Reports {
     }
 
     private void filterMonthToDate() {
+        while(true){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("\n==================================");
+        System.out.println("========= MONTH TO DATE ==========");
+        System.out.println("==================================");
         LocalDate today = LocalDate.now();
         LocalDate firstOfMonth = today.withDayOfMonth(1);
         filterByDateRange(firstOfMonth, today);
+        System.out.println("H) Go Back To Ledger");
+        String option = scan.nextLine();
+        if (option.equalsIgnoreCase("H")){
+            break;
+        }
+        else {
+            System.out.println("INVALID OPTION!");
+        }
+    }
+
     }
 
     private void filterPreviousMonth() {
-        LocalDate today = LocalDate.now();
-        LocalDate firstOfLastMonth = today.minusMonths(1).withDayOfMonth(1);
-        LocalDate lastOfLastMonth = YearMonth.from(firstOfLastMonth).atEndOfMonth();
-        filterByDateRange(firstOfLastMonth, lastOfLastMonth);
+        while(true){
+            Scanner scan = new Scanner(System.in);
+            System.out.println("\n==================================");
+            System.out.println("========= PREVIOUS MONTH =========");
+            System.out.println("==================================");
+            LocalDate today = LocalDate.now();
+            LocalDate firstOfLastMonth = today.minusMonths(1).withDayOfMonth(1);
+            LocalDate lastOfLastMonth = YearMonth.from(firstOfLastMonth).atEndOfMonth();
+            filterByDateRange(firstOfLastMonth, lastOfLastMonth);
+            System.out.println("H) Go Back To Ledger");
+            String option = scan.nextLine();
+            if (option.equalsIgnoreCase("H")){
+                break;
+            }
+            else {
+                System.out.println("INVALID OPTION!");
+            }
+        }
+
     }
 
     private void filterYearToDate() {
-        LocalDate today = LocalDate.now();
-        LocalDate firstOfYear = today.withDayOfYear(1);
-        filterByDateRange(firstOfYear, today);
+        while(true){
+            Scanner scan = new Scanner(System.in);
+            System.out.println("\n==================================");
+            System.out.println("========== YEAR TO DATE ==========");
+            System.out.println("==================================");
+            LocalDate today = LocalDate.now();
+            LocalDate firstOfYear = today.withDayOfYear(1);
+            filterByDateRange(firstOfYear, today);
+            System.out.println("H) Go Back To Ledger");
+            String option = scan.nextLine();
+            if (option.equalsIgnoreCase("H")){
+                break;
+            }
+            else {
+                System.out.println("INVALID OPTION!");
+            }
+        }
+
     }
 
     private void filterPreviousYear() {
-        LocalDate today = LocalDate.now();
-        LocalDate firstOfLastYear = today.minusYears(1).withDayOfYear(1);
-        LocalDate lastOfLastYear = firstOfLastYear.withDayOfYear(firstOfLastYear.lengthOfYear());
-        filterByDateRange(firstOfLastYear, lastOfLastYear);
+        while(true){
+            Scanner scan = new Scanner(System.in);
+            System.out.println("\n==================================");
+            System.out.println("========== PREVIOUS YEAR =========");
+            System.out.println("==================================");
+            LocalDate today = LocalDate.now();
+            LocalDate firstOfLastYear = today.minusYears(1).withDayOfYear(1);
+            LocalDate lastOfLastYear = firstOfLastYear.withDayOfYear(firstOfLastYear.lengthOfYear());
+            filterByDateRange(firstOfLastYear, lastOfLastYear);
+            System.out.println("H) Go Back To Ledger");
+            String option = scan.nextLine();
+            if (option.equalsIgnoreCase("H")){
+                break;
+            }
+            else {
+                System.out.println("INVALID OPTION!");
+            }
+        }
+
     }
 
     private void filterByVendor(String vendor) {
+
+        while(true){
+            System.out.println("\n==================================");
+            System.out.println("======== SEARCH BY VENDOR ========");
+            System.out.println("==================================");
+        Scanner scan = new Scanner(System.in);
+
+        LocalDate today = LocalDate.now();
         try (BufferedReader reader = new BufferedReader(new FileReader(csvfile))) {
             List<String> transactions = new ArrayList<>();
             String line;
@@ -126,6 +194,16 @@ public class Reports {
         } catch (Exception e) {
             System.out.println("Error reading from file.");
         }
+        System.out.println("H) Go Back To Ledger");
+        String option = scan.nextLine();
+        if (option.equalsIgnoreCase("H")){
+            break;
+        }
+        else {
+            System.out.println("INVALID OPTION!");
+        }
+    }
+
     }
 
     public void filterByDateRange(LocalDate startDate, LocalDate endDate) {
