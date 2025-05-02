@@ -20,7 +20,6 @@ A command-line accounting ledger application that tracks financial transactions 
   - Year-to-Date report
   - Previous Year report
   - Vendor search
-  - Custom search with multiple filters
 
 ## Screen
 
