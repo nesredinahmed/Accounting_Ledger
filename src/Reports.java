@@ -127,6 +127,7 @@ public class Reports {
             System.out.println("Error reading from file.");
         }
     }
+
     public void filterByDateRange(LocalDate startDate, LocalDate endDate) {
         try (BufferedReader reader = new BufferedReader(new FileReader(csvfile))) {
             List<String> transactions = new ArrayList<>();
