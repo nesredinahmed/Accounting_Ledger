@@ -28,8 +28,11 @@ A command-line accounting ledger application that tracks financial transactions 
 
 
 D) Add Deposit
+
 P) Make Payment (Debit)
+
 L) Ledger
+
 X) Exit
 
 
@@ -38,9 +41,13 @@ X) Exit
 
 
 A) Show All Transactions
+
 D) Show Deposits Only
+
 P) Show Payments Only
+
 R) Reports
+
 H) Go Back to Home
 
 
