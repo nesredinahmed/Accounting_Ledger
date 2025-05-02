@@ -5,7 +5,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         while (true) {
-            try {
+
                 System.out.println("==================================");
                 System.out.println("============ ACCOUNT =============");
                 System.out.println("==================================");
@@ -52,9 +52,6 @@ public class Main {
                     System.out.println("Invalid input. Please try again.");
                 }
 
-            } catch (Exception e) {
-                System.out.println("Something went wrong. Please try again.");
-            }
         }
     }
 }

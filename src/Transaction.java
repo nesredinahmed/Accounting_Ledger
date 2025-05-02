@@ -44,7 +44,7 @@ public class Transaction {
 
     // Read all transactions
     public static void showAll() {
-        while (true) {
+        while(true) {
             Scanner scan = new Scanner(System.in);
             System.out.println("\n==================================");
             System.out.println("==========ALL TRANSACTION=========");
@@ -52,9 +52,10 @@ public class Transaction {
             readTransactionsByType("ALL");
             System.out.println("H) Go Back To Ledger");
             String option = scan.nextLine();
-            if (option.equalsIgnoreCase("H")) {
+            if(option.equalsIgnoreCase("H")){
                 break;
-            } else {
+            }
+            else {
                 System.out.println("INVALID OPTION!");
             }
         }
@@ -63,19 +64,20 @@ public class Transaction {
 
     // Read only deposits (amount > 0)
     public static void showDeposits() {
-        while (true) {
-            Scanner scan = new Scanner(System.in);
-            System.out.println("\n==================================");
-            System.out.println("============ DEPOSIT =============");
-            System.out.println("==================================");
-            readTransactionsByType("DEPOSIT");
+        while(true){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("\n==================================");
+        System.out.println("============ DEPOSIT =============");
+        System.out.println("==================================");
+        readTransactionsByType("DEPOSIT");
             System.out.println("H) Go Back To Ledger");
             String option = scan.nextLine();
-            if (option.equalsIgnoreCase("H")) {
-                break;
-            } else {
-                System.out.println("INVALID OPTION!");
-            }
+        if (option.equalsIgnoreCase("H")){
+            break;
+        }
+        else {
+            System.out.println("INVALID OPTION!");
+        }
         }
     }
 
@@ -89,9 +91,10 @@ public class Transaction {
             readTransactionsByType("PAYMENT");
             System.out.println("H) GO Back To Ledger");
             String option = scan.nextLine();
-            if (option.equalsIgnoreCase("H")) {
+            if(option.equalsIgnoreCase("H")){
                 break;
-            } else {
+            }
+            else {
                 System.out.println("INVALID OPTION");
             }
         }
@@ -113,6 +116,9 @@ public class Transaction {
                 }
             }
             Collections.reverse(transactions); // newest entries first
+//                        for (String t : transactions) {
+//                System.out.println(t);
+//            }
             transactions.forEach(System.out::println);
         } catch (Exception e) {
             System.out.println("Error reading from file.");
@@ -129,10 +135,11 @@ public class Transaction {
 
         try {
             double amount = Double.parseDouble(scanner.nextLine());
-            if (amount <= 0) {
+            if (amount <= 0){
                 System.out.println("Payment amount must be positive.");
-            } else {
-                addDeposit(description, vendor, amount);
+            }
+            else {
+            addDeposit(description, vendor, amount);
             }
         } catch (NumberFormatException e) {
             System.out.println("Invalid amount. Transaction canceled.");
@@ -151,8 +158,9 @@ public class Transaction {
             double amount = Double.parseDouble(scanner.nextLine());
             if (amount <= 0) {
                 System.out.println("Payment amount must be positive.");
-            } else {
-                makePayment(description, vendor, amount);
+            }
+            else {
+            makePayment(description, vendor, amount);
             }
         } catch (NumberFormatException e) {
             System.out.println("Invalid amount. Transaction canceled.");
