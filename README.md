@@ -25,9 +25,7 @@ A command-line accounting ledger application that tracks financial transactions 
 ## Screenshots
 
 ### Home Menu
-=============================
 ====== LEDGER ACCOUNT =======
-=============================
 D) Add Deposit
 P) Make Payment (Debit)
 L) Ledger
@@ -35,9 +33,7 @@ X) Exit
 
 
 ### Ledger Menu
-===========================
 ======== LEDGER ===========
-===========================
 A) Show All Transactions
 D) Show Deposits Only
 P) Show Payments Only
