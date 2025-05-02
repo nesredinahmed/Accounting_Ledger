@@ -28,30 +28,6 @@ public class Reports {
 
             String option = scanner.nextLine();
 
-//            if(option.equals("1")){
-//                filterMonthToDate();
-//            }
-//            else  if(option.equals("2")){
-//                filterPreviousMonth();
-//            }
-//            else if(option.equals("3")){
-//                filterYearToDate();
-//            }
-//            else if(option.equals("4")){
-//                filterPreviousYear();
-//            }
-//            else if(option.equals("5")){
-//                System.out.print("Enter vendor name: ");
-//                String vendor = scanner.nextLine();
-//                filterByVendor(vendor);
-//            }
-//            else if(option.equals("0")){
-//                break;
-//            }
-//            else {
-//                System.out.println("Invalid option. Please try again.");
-//            }
-
             switch (option) {
                 case "1":
                     filterMonthToDate();
