@@ -22,7 +22,7 @@ A command-line accounting ledger application that tracks financial transactions 
   - Vendor search
   - Custom search with multiple filters
 
-## Screenshots
+## Screen
 
 ### Home Menu
 ====== LEDGER ACCOUNT =======
